@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f3f4f6"/>
+  <rect x="75" y="75" width="50" height="50" rx="4" fill="#d1d5db"/>
+  <circle cx="85" cy="90" r="3" fill="#9ca3af"/>
+  <path d="M75 110 L85 100 L95 110 L105 95 L125 115 L125 125 L75 125 Z" fill="#9ca3af"/>
+  <text x="100" y="150" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">
+    Obrázek se nepodařilo načíst
+  </text>
+</svg>
