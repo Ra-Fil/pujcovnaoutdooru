@@ -72,8 +72,8 @@ jobs:
                       proxy_set_header   Host       \$host;
               }
               location / {
-                      alias /srv/app/dist/public/;
-                      try_files $uri /index.html;
+                      root /srv/app/dist/public/;
+                      try_files $uri /index.html =404;
               }
           }        
           EOF
