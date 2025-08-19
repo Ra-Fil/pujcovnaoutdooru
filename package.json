@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production PORT=8080 tsx server/index.js",
     "dev:server": "tsx server/index.ts",
     "check": "tsc",
     "db:push": "drizzle-kit push"

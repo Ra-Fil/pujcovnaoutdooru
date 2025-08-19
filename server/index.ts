@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  const port = 3001;
+  const port = process.env["PORT"] || 3001;
 const server = await registerRoutes(app);
 
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -66,7 +66,7 @@ if (app.get("env") === "development") {
   serveStatic(app);
 }
 
-server.listen(port, '0.0.0.0', () => {
+server.listen(Number(port), '0.0.0.0', () => {
   log(`Server běží na http://0.0.0.0:${port}`);
 });
 })();
