@@ -67,6 +67,6 @@ if (app.get("env") === "development") {
 }
 
 server.listen(Number(port), '0.0.0.0', () => {
-  log(`Server běží na http://0.0.0.0:${port}`);
+  log(`Server běží na http://localhost:${port}`);
 });
 })();
