@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
   build: {
-  outDir: "../../dist/public",
+  outDir: "../../dist/public", // relativně vůči client/
   emptyOutDir: true,
   rollupOptions: {
     input: "index.html",

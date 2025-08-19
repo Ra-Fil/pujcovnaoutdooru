@@ -54,19 +54,25 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createEquipment(equipmentData: InsertEquipment): Promise<Equipment> {
+    console.log("🛠️ Equipment payload:", equipmentData);
     const [newEquipment] = await db
       .insert(equipment)
-      .values(equipmentData)
-      .returning();
-    return newEquipment;
-  }
+      .values({
+      ...equipmentData,
+      categories: equipmentData.categories,
+    })
+    .returning();
+  return newEquipment;
+}
 
   async updateEquipment(id: number, equipmentData: UpdateEquipment): Promise<Equipment | undefined> {
+    console.log("➡️ Update payload:", equipmentData);
     const [updatedEquipment] = await db
       .update(equipment)
       .set(equipmentData)
       .where(eq(equipment.id, id))
       .returning();
+      console.log("Equipment update:", { id, equipmentData });
     return updatedEquipment || undefined;
   }
 

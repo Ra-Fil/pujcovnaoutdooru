@@ -70,7 +70,7 @@ export async function sendContractEmails(
     html: `
       <p>Ahoj!</p>
       <p>Děkuji za objednávku! Rezervace vybavení číslo <strong>${orderNumber}</strong> byla úspěšně vytvořena.</p>
-      <p>V příloze najdeš smlouvu o vypůjčení vybavení, kterou podepíšeme při předání.</p>
+      <p>V příloze najdeš návrh smlouvy o vypůjčení vybavení, kterou podepíšeme při předání.</p>
       <h3>Důležité informace:</h3>
       <ul>
         <li>Kontaktujte mě prosím pro upřesnění místa a času předání.</li>

@@ -232,7 +232,7 @@ export default function CalendarModal({
           {equipmentName ? (
             <p id="calendar-dialog-description" className="text-sm text-muted-foreground">{equipmentName}</p>
           ) : (
-            <p id="calendar-dialog-description" className="sr-only">Dialog pro výběr termínu rezervace vybavení</p>
+            <p id="calendar-dialog-description" className="sr-only">Výběr termínu rezervace vybavení</p>
           )}
         </DialogHeader>
 

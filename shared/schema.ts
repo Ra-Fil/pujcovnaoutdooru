@@ -1,12 +1,13 @@
 import { pgTable, text, serial, integer, boolean, date, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+import { jsonb } from "drizzle-orm/pg-core";
 
 export const equipment = pgTable("equipment", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   description: text("description").notNull(),
-  dailyPrice: integer("daily_price").notNull(), // Legacy field - kept for compatibility
+  dailyPrice: integer("daily_price").notNull(),
   price1to3Days: integer("price_1_to_3_days").notNull().default(0),
   price4to7Days: integer("price_4_to_7_days").notNull().default(0),
   price8PlusDays: integer("price_8_plus_days").notNull().default(0),
@@ -14,7 +15,7 @@ export const equipment = pgTable("equipment", {
   stock: integer("stock").notNull(),
   imageUrl: text("image_url").notNull(),
   sortOrder: integer("sort_order").notNull().default(0),
-  categories: text("categories").array().notNull().default(["general"]),
+  categories: jsonb("categories").notNull().default(["general"]),
 });
 
 export const reservations = pgTable("reservations", {

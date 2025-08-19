@@ -279,8 +279,8 @@ function OrdersList() {
       });
 
       setEditFormData({
-        dateFrom: reservation.dateFrom,
-        dateTo: reservation.dateTo,
+        dateFrom: reservation.dateFrom.split("T")[0],
+        dateTo: reservation.dateTo.split("T")[0],
         quantity: reservation.quantity || 1,
         equipmentId: "",
         items: formattedItems
@@ -476,7 +476,7 @@ function OrdersList() {
                         <Input
                           id="dateFrom"
                           type="date"
-                          value={editFormData.dateFrom}
+                          value={editFormData.dateFrom?.slice(0, 10) ?? ""}
                           onChange={(e) => setEditFormData(prev => ({ ...prev, dateFrom: e.target.value }))}
                         />
                       </div>
@@ -485,7 +485,7 @@ function OrdersList() {
                         <Input
                           id="dateTo"
                           type="date"
-                          value={editFormData.dateTo}
+                          value={editFormData.dateTo?.slice(0, 10) ?? ""}
                           onChange={(e) => setEditFormData(prev => ({ ...prev, dateTo: e.target.value }))}
                         />
                       </div>

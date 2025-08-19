@@ -40,7 +40,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/auth/login", (req, res) => {
     const { username, password } = req.body;
 
-    if (username === "pujcovna" && password === "Rada1+Honza") {
+    if (username === "Honza" && password === "Rada1+Honza") {
       (req.session as any).authenticated = true;
       (req.session as any).username = username;
 
@@ -77,7 +77,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Configure multer for image uploads
-  const uploadDir = path.join(process.cwd(), "public", "uploads");
+  const uploadDir = path.join(process.cwd(), "client", "public", "uploads");
 
   // Ensure upload directory exists
   try {
@@ -138,7 +138,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Serve uploaded images
   app.use(
     "/uploads",
-    express.static(path.join(process.cwd(), "public", "uploads")),
+    express.static(path.join(process.cwd(), "client", "public", "uploads")),
   );
 
   // Get all equipment
@@ -164,6 +164,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
           .status(400)
           .json({ message: "Invalid data", errors: error.errors });
       }
+
+      console.error("Chyba při vytváření vybavení:", error);
+
       res.status(500).json({ message: "Failed to create equipment" });
     }
   });
@@ -182,6 +185,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       res.json(equipment);
     } catch (error) {
+      console.error("❌ PUT /api/equipment/:id failed:", error);
       if (error instanceof z.ZodError) {
         return res
           .status(400)
@@ -291,6 +295,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         dateTo: cartItems[0].dateTo,
         totalPrice,
         totalDeposit,
+        quantity: cartItems.reduce((sum, item) => sum + item.quantity, 0),
       };
 
       const reservation = await dbStorage.createReservation(reservationData);
@@ -319,8 +324,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           dateTo: item.dateTo,
           days: item.days,
           quantity: item.quantity,
-          dailyPrice: item.dailyPrice, // This is already the correct tiered price from frontend
-          totalPrice: item.totalPrice, // This is already calculated with tiered pricing
+          dailyPrice: item.dailyPrice, 
+          totalPrice: item.totalPrice,
           deposit: item.deposit,
         });
         reservationItems.push(reservationItem);

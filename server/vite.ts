@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
-import viteConfig from "../vite.config";
+import viteConfig from "../vite.config"; // synchronní import
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
@@ -20,12 +20,6 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
-  const serverOptions = {
-    middlewareMode: true,
-    hmr: { server },
-    allowedHosts: true,
-  };
-
   const vite = await createViteServer({
     ...viteConfig,
     configFile: false,
@@ -36,11 +30,16 @@ export async function setupVite(app: Express, server: Server) {
         process.exit(1);
       },
     },
-    //server: serverOptions,
     appType: "custom",
+    server: {
+      middlewareMode: true,
+      hmr: { server },
+      allowedHosts: true,
+    },
   });
 
   app.use(vite.middlewares);
+
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 
@@ -80,10 +79,4 @@ export function serveStatic(app: Express) {
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
-}
-
-server: {
-  proxy: {
-    "/api"; "http://localhost:8080"
-  }
 }
