@@ -100,6 +100,7 @@ async function addLogo(doc: jsPDF, x: number, y: number): Promise<void> {
     // Load the actual logo file
     const logoPath = path.join(
       process.cwd(),
+      "client",
       "public",
       "uploads",
       "logo-pujcovnaoutdooru-cz.png",
@@ -193,7 +194,7 @@ function addPartyInfo(doc: jsPDF, data: InvoiceData, yPos: number): number {
     "779 00 Olomouc",
     "IČ: 02938316",
     "Tel.: 606 476 399",
-    "Nejsem platce DPH",
+    "Nejsem plátce DPH",
   ];
 
   // Customer info (right)
