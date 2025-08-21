@@ -37,10 +37,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   };
 
   // Authentication routes
+    const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
   app.post("/api/auth/login", (req, res) => {
     const { username, password } = req.body;
 
-    if (username === "Honza" && password === "Rada1+Honza") {
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
       (req.session as any).authenticated = true;
       (req.session as any).username = username;
 
