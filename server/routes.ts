@@ -4,7 +4,7 @@ import { storage as dbStorage } from "./storage";
 import {
   insertReservationSchema,
   contactFormSchema,
-  cartItemSchema,git add
+  cartItemSchema,
   insertEquipmentSchema,
   updateEquipmentSchema,
 } from "@shared/schema";
