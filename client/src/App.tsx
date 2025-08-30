@@ -15,6 +15,7 @@ import Terms from "@/pages/terms";
 import UsefulInfo from "@/pages/useful-info";
 import NotFound from "@/pages/not-found";
 import ProtectedRoute from "@/components/protected-route";
+import CookieConsent from "./components/CookieConsent";
 
 function Router() {
   return (
@@ -44,6 +45,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <CookieConsent />
       </TooltipProvider>
     </QueryClientProvider>
   );

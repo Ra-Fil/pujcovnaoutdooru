@@ -11,35 +11,30 @@ interface SEOHeadProps {
 
 export default function SEOHead({
   title = "Půjčovna outdoorového vybavení | Ferratové sety, horolezecké vybavení | PUJCOVNAOUTDOORU.CZ",
-  description = "Půjčujeme outdoorového vybavení v Brně, Olomouci, Bílovicích nad Svitavou. Ferratové sety, horolezecké vybavení, vybavení na canyoning, kempování a další. Rezervace online.",
-  keywords = "půjčovna outdoorového vybavení, ferratové sety, horolezecké vybavení, helmy, via ferrata, Olomouc, Brno, outdoor, horské sporty, půjčení vybavení, půjčovna Brno, půjčovna Olomouc",
+  description = "Půjčuji outdoorového vybavení v Brně, Olomouci, Bílovicích nad Svitavou. Ferratové sety, horolezecké vybavení, vybavení na canyoning, kempování a další. Rezervace online.",
+  keywords = "půjčovna outdoorového vybavení, ferratové sety, horolezecké vybavení, helmy, via ferrata, Olomouc, Brno, outdoor, horské sporty, půjčení vybavení, vybavení na canyoning, krosny pro děti, krosny na nošení dětí",
   ogImage = "/uploads/logo-pujcovnaoutdooru-cz.png",
   structuredData,
   canonical,
 }: SEOHeadProps) {
   useEffect(() => {
-    // Update document title
     document.title = title;
 
-    // Update meta description
     const descriptionMeta = document.querySelector('meta[name="description"]');
     if (descriptionMeta) {
       descriptionMeta.setAttribute("content", description);
     }
 
-    // Update meta keywords
     const keywordsMeta = document.querySelector('meta[name="keywords"]');
     if (keywordsMeta) {
       keywordsMeta.setAttribute("content", keywords);
     }
 
-    // Update Open Graph title
     const ogTitleMeta = document.querySelector('meta[property="og:title"]');
     if (ogTitleMeta) {
       ogTitleMeta.setAttribute("content", title);
     }
 
-    // Update Open Graph description
     const ogDescMeta = document.querySelector(
       'meta[property="og:description"]',
     );
@@ -47,13 +42,11 @@ export default function SEOHead({
       ogDescMeta.setAttribute("content", description);
     }
 
-    // Update Open Graph image
     const ogImageMeta = document.querySelector('meta[property="og:image"]');
     if (ogImageMeta) {
       ogImageMeta.setAttribute("content", ogImage);
     }
 
-    // Update Twitter title
     const twitterTitleMeta = document.querySelector(
       'meta[property="twitter:title"]',
     );
@@ -61,7 +54,6 @@ export default function SEOHead({
       twitterTitleMeta.setAttribute("content", title);
     }
 
-    // Update Twitter description
     const twitterDescMeta = document.querySelector(
       'meta[property="twitter:description"]',
     );
@@ -69,7 +61,6 @@ export default function SEOHead({
       twitterDescMeta.setAttribute("content", description);
     }
 
-    // Update Twitter image
     const twitterImageMeta = document.querySelector(
       'meta[property="twitter:image"]',
     );
@@ -77,7 +68,6 @@ export default function SEOHead({
       twitterImageMeta.setAttribute("content", ogImage);
     }
 
-    // Add canonical URL if provided
     if (canonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
@@ -87,8 +77,7 @@ export default function SEOHead({
       }
       canonicalLink.setAttribute("href", canonical);
     }
-
-    // Add structured data if provided
+ 
     if (structuredData) {
       let structuredDataScript = document.querySelector(
         'script[data-type="structured-data"]',
@@ -103,50 +92,49 @@ export default function SEOHead({
     }
   }, [title, description, keywords, ogImage, structuredData, canonical]);
 
-  return null; // This component doesn't render anything visible
+  return null;
 }
 
-// Pre-defined SEO configurations for different pages
 export const SEOConfigs = {
   home: {
     title: "Půjčovna outdoorového vybavení | PUJCOVNAOUTDOORU.CZ",
-    description: "Půjčujte si outdoorového vybavení v Brně, Olomouci, Bílovicích nad Svitavou. Ferratové sety, horolezecké vybavení, vybavení na canyoning, kempování a další. Rezervace online.",
+    description: "Půjčovna outdoorového vybavení v Brně, Olomouci, Bílovicích nad Svitavou. Ferratové sety, horolezecké vybavení, vybavení na canyoning, kempování a další. Rezervace online.",
     keywords:
-      "půjčovna outdoorového vybavení, ferratové sety, horolezecké vybavení, helmy, via ferrata, Olomouc, outdoor, horské sporty, půjčení vybavení",
+      "půjčovna outdoorového vybavení, ferratové sety, horolezecké vybavení, helmy, via ferrata, Olomouc, Brno, Bílovice nad Svitavou, vybavený na canyoning, cenyoning, outdoor, horské sporty, půjčení vybavení",
   },
   equipment: {
     title:
-      "Vybavení na půjčení | Ferratové sety, helmy, úvazky, paddleboardy | PUJCOVNAOUTDOORU.CZ",
+      "Půjčovna outdoorového vybavení | PUJCOVNAOUTDOORU.CZ",
     description:
-      "Kompletní seznam dostupného outdoorového vybavení na půjčení. Ferratové sety, horolezecké helmy, úvazky, brzdy. Profesionální kvalita za výhodné ceny.",
+      "Ferratové sety, horolezecké helmy, úvazky, brzdy, turistiské vybavení, vybavení na canyoning a další. Rezervace online.",
     keywords:
       "ferratové sety půjčení, horolezecké vybavení, helmy na půjčení, úvazky, tlumič pádu, brzdy, via ferrata vybavení",
   },
   about: {
     title:
-      "O nás | Profesionální půjčovna outdoorového vybavení | PUJCOVNAOUTDOORU.CZ",
+      "Půjčovna outdoorového vybavení | PUJCOVNAOUTDOORU.CZ",
     description:
-      "Seznamte se s naší půjčovnou outdoorového vybavení v Olomouci. Více než 10 let zkušeností s kvalitním servisem a bezpečnostním vybavením.",
+      "Ferratové sety, horolezecké helmy, úvazky, brzdy, turistiské vybavení, vybavení na canyoning a další. Rezervace online.",
     keywords:
-      "o půjčovně, outdoor Olomouc, Jan Rücker, zkušenosti, bezpečné vybavení",
+      "ferratové sety půjčení, horolezecké vybavení, helmy na půjčení, úvazky, tlumič pádu, brzdy, via ferrata vybavení",
   },
   contact: {
-    title: "Kontakt | Rezervace a informace | PUJCOVNAOUTDOORU.CZ",
+    title: "Kontakt | PUJCOVNAOUTDOORU.CZ",
     description:
-      "Kontaktujte naši půjčovnu outdoorového vybavení v Olomouci. Telefonní číslo, email, adresa a informace o rezervacích. Rychlá a spolehlivá komunikace.",
+      "Ferratové sety, horolezecké helmy, úvazky, brzdy, turistiské vybavení, vybavení na canyoning a další. Rezervace online.",
     keywords:
-      "kontakt půjčovna, telefon, email, adresa Olomouc, rezervace, informace",
+      "kontakt půjčovna, telefon, email, rezervace, informace, rezervace a informace",
   },
   locations: {
-    title: "Místa převzetí vybavení | Olomouc, Bílověž | PUJCOVNAOUTDOORU.CZ",
+    title: "Místa převzetí vybavení | PUJCOVNAOUTDOORU.CZ",
     description:
-      "Možnosti převzetí a vrácení outdoorového vybavení. Hlavní základna Olomouc a další místa podle domluvy. Flexibilní servis pro vaše potřeby.",
+      "Možnosti převzetí a vrácení outdoorového vybavení. Hlavní základna Brno a další místa podle domluvy.",
     keywords:
       "převzetí vybavení, Olomouc, Bílověž, místa převzetí, flexibilní servis",
   },
   terms: {
     title:
-      "Obchodní podmínky | Pravidla půjčení vybavení | PUJCOVNAOUTDOORU.CZ",
+      "Obchodní podmínky | PUJCOVNAOUTDOORU.CZ",
     description:
       "Obchodní podmínky půjčovny outdoorového vybavení. Pravidla půjčení, zálohy, odpovědnost, pojištění a další důležité informace.",
     keywords:
@@ -154,9 +142,9 @@ export const SEOConfigs = {
   },
   usefulInfo: {
     title:
-      "Užitečné informace | Tipy pro outdoor a via ferrata | PUJCOVNAOUTDOORU.CZ",
+      "Užitečné informace | PUJCOVNAOUTDOORU.CZ",
     description:
-      "Užitečné informace a tipy pro outdoor aktivity. Jak používat ferratové sety, bezpečnostní pravidla, doporučení pro via ferrata a horské sporty.",
+      "Jak používat ferratové sety, doporučení, informace o půjčení outdoorového vybavení.",
     keywords:
       "tipy outdoor, jak používat ferratové sety, bezpečnost via ferrata, horské sporty, užitečné informace",
   },
