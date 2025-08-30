@@ -23,7 +23,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-200 border border-gray-200 shadow-xl rounded-lg p-5 w-[90%] md:w-[55%]">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-200 border border-gray-200 shadow-xl rounded-lg p-5 w-[90%] md:w-[48%]">
       <div className="flex flex-col gap-3 text-center">
         <p className="text-sm text-gray-800">
           🍪 Cookies nejsou jen sušenky – i my je používáme, aby web běžel správně a mohli jsme ho vylepšovat.

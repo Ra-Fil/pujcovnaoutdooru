@@ -95,7 +95,7 @@ export default function Terms() {
 
               <Card>
                 <CardHeader>
-                    <CardTitle>4.</CardTitle>
+                    <CardTitle>5.</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <p> Správce osobních údajů, jakožto provozovatel webové stránky www.pujcovnaoutdooru.cz, užívá 
@@ -108,7 +108,7 @@ export default function Terms() {
 
               <Card>
                 <CardHeader>
-                    <CardTitle>5.</CardTitle>                    
+                    <CardTitle>6.</CardTitle>                    
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <p>Ukládání cookies můžete kdykoli odmítnout nebo nastavit prostřednictvím Vašeho 

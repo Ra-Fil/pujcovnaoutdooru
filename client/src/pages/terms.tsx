@@ -46,7 +46,7 @@ export default function Terms() {
                   </p>
                   <p>
                     <strong>Email:</strong>{" "}
-                    <a href="mailto:honza@pujcovnaoutdooru.cz">
+                    <a href="mailto:pujcovnaoutdooru@gmail.com">
                       honza@pujcovnaoutdooru.cz
                     </a>
                     <br />

@@ -19,7 +19,7 @@ export default function Footer() {
               <p>Půjčovna outdoorového vybavení</p>
               <p>Brno | Olomouc | Bílovice nad Svitavou</p>
               <p>
-                <a href="mailto:honza@pujcovnaoutdooru.cz" className="hover:text-white transition-colors">
+                <a href="mailto:pujcovnaoutdooru@gmail.com" className="hover:text-white transition-colors">
                   honza@pujcovnaoutdooru.cz
                 </a>
               </p>
