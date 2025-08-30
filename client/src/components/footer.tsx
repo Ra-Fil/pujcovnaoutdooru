@@ -38,6 +38,9 @@ export default function Footer() {
               <Link href="/obchodni-podminky" className="text-gray-300 hover:text-white transition-colors" onClick={handleLinkClick}>
                 Obchodní podmínky
               </Link>
+              <Link href="/gdpr" className="text-gray-300 hover:text-white transition-colors" onClick={handleLinkClick}>
+                GDPR
+              </Link>
               <Link href="/uzitecne-informace" className="text-gray-300 hover:text-white transition-colors" onClick={handleLinkClick}>
                 Užitečné informace
               </Link>

@@ -12,6 +12,7 @@ import Admin from "@/pages/admin";
 import Login from "@/pages/login";
 import Contact from "@/pages/contact";
 import Terms from "@/pages/terms";
+import Gdpr from "@/pages/gdpr";
 import UsefulInfo from "@/pages/useful-info";
 import NotFound from "@/pages/not-found";
 import ProtectedRoute from "@/components/protected-route";
@@ -33,6 +34,7 @@ function Router() {
       </Route>
       <Route path="/kontakt" component={Contact} />
       <Route path="/obchodni-podminky" component={Terms} />
+      <Route path="/gdpr" component={Gdpr} />
       <Route path="/uzitecne-informace" component={UsefulInfo} />
       <Route component={NotFound} />
     </Switch>

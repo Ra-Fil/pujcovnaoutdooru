@@ -23,11 +23,11 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-100 border border-gray-200 shadow-xl rounded-2xl p-5 w-[90%] max-w-md z-50">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-200 border border-gray-200 shadow-xl rounded-lg p-5 w-[90%] md:w-[55%]">
       <div className="flex flex-col gap-3 text-center">
         <p className="text-sm text-gray-800">
-          Tento web používá cookies pro zlepšení uživatelského zážitku a
-          analýzu provozu.{" "}
+          🍪 Cookies nejsou jen sušenky – i my je používáme, aby web běžel správně a mohli jsme ho vylepšovat.
+Chcete je povolit? {" "}
           <a href="/gdpr" className="underline text-teal-800">
             Více informací
           </a>
@@ -35,13 +35,13 @@ export default function CookieConsent() {
         <div className="flex justify-center gap-3">
           <button
             onClick={rejectCookies}
-            className="px-4 py-2 rounded-2xl bg-teal-800 text-white hover:bg-teal-600 transition"
+            className="px-4 py-2 rounded-lg bg-teal-800 text-white hover:bg-teal-600 transition"
           >
             Odmítnout
           </button>
           <button
             onClick={acceptCookies}
-            className="px-4 py-2 rounded-2xl bg-teal-800 text-white hover:bg-teal-600 transition"
+            className="px-4 py-2 rounded-lg bg-teal-800 text-white hover:bg-teal-600 transition"
           >
             Souhlasím
           </button>
