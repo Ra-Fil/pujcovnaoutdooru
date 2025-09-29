@@ -84,9 +84,12 @@ export default function Terms() {
                     <p> Zpracování osobních údajů je prováděno Janem Rückerem. Osobní údaje pro tohoto správce 
                         zpracovávají také zpracovatelé:
                     </p>
-                    <li>Google Czech Republic, s.r.o., IČ: 27604977, se sídlem Stroupežnického 3191/17, 150 00 
-                        Praha 5,
-                    </li>
+                    <ul className="list-disc list-inside">
+                      <li>
+                      Google Czech Republic, s.r.o., IČ: 27604977, se sídlem Stroupežnického 3191/17,
+                      150 00 Praha 5
+                      </li>
+                    </ul>
                     <p> Vaše osobní údaje si ponechávám po dobu běhu promlčecích lhůt, pokud zákon nestanoví 
                         delší dobu k jejich uchování nebo jsme v konkrétních případech neuvedli jinak.
                     </p>

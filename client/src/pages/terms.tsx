@@ -236,15 +236,17 @@ export default function Terms() {
 
                   <p>
                     <strong>Smlouva zaniká: </strong>
-                    <li>Navrácením zboží.</li>
-                    <li>Písemně, dohodou obou smluvních stran.</li>
-                    <li>
+                    <ul className="list-disc list-inside">
+                      <li>Navrácením zboží.</li>
+                      <li>Písemně, dohodou obou smluvních stran.</li>
+                      <li>
                       Uplynutím výpovědní lhůty na základě písemné výpovědi z
                       jakéhokoliv důvodu. Výpovědní lhůta se sjednává
                       desetidenní a začíná běžet od následujícího dne po
                       doručení výpovědi druhé smluvní straně. Ustanovení dle
                       §676,odstavce 2, Občanského zákoníku se neužije.
-                    </li>
+                      </li>
+                    </ul>
                   </p>
                 </CardContent>
               </Card>
