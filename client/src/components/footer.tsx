@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="flex flex-col items-start md:items-end space-y-4">
             <h3 className="text-lg font-semibold relative mt-5 pb-[17px] mb-[12px] text-[1.3em] font-bold before:content-[''] before:h-[1.5px] before:bg-[#125d58] before:absolute before:bottom-0 before:left-0 before:w-[50px]">Sledujte nás</h3>
             <a
-              href="#facebook"
+              href="https://www.facebook.com/pujcovnaoutdooru/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
