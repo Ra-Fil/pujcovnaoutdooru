@@ -116,7 +116,7 @@ export default function Terms() {
                        funkce webu dostupné nebo mohou být omezené.
                     </p>
                     <p>
-                       Tyto podmínky nabývají účinnosti dnem 20.9.2018.
+                       Tyto podmínky nabývají účinnosti dnem 30.8.2025.
                     </p>
                 </CardContent>
               </Card>

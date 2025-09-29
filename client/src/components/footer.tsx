@@ -2,11 +2,31 @@ import { Link } from "wouter";
 import { Facebook } from "lucide-react";
 
 export default function Footer() {
-  // Function to scroll to top when clicking footer links
+  // Funkce pro scrolování nahoru po kliknutí na odkaz v patičce
   const handleLinkClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
+  
+  //  <>
+  //    {/* Obrázek pro desktop */}
+  //    <div className="hidden md:block w-full">
+  //      <img
+  //        src="/uploads/pujcovna-vybaveni-hory-nad-footer.png"
+  //        alt="Outdoor vybavení půjčovna"
+  //        className="w-full object-cover"
+  //      />
+  //    </div>
+
+  //    {/* Obrázek pro mobil */}
+  //    <div className="block md:hidden w-full">
+  //      <img
+  //        src="/uploads/pujcovna-vybaveni-hory-nad-footer.png"
+  //        alt="Půjčovna outdoor vybavení"
+  //        className="w-full object-cover"
+  //      />
+  //    </div>
+  
     <footer className="bg-gray-900 text-white py-8 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pl-6 md:pl-0">
@@ -71,5 +91,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
