@@ -51,7 +51,7 @@ export default function Terms() {
                     </a>
                     <br />
                     <strong>Telefon:</strong>{" "}
-                    <a href="tel:+420734415950">+420 734 415 950</a>
+                    <a href="tel:+420734415950">+420 606 476 399</a>
                     <br />
                   </p>
 
