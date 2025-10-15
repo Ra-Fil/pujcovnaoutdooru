@@ -34,7 +34,7 @@ export default function Terms() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <p> Jan Rücker, se sídlem: 17. listopadu 1215/2b, 771 47 Olomouc, IČ 02938316, email: 
-                        pujcovnaoutdooru@gmail.com, (dále jen <strong>„pronajímatel“</strong>) zpracovává ve smyslu 
+                        honza@pujcovnaoutdooru.cz, (dále jen <strong>„pronajímatel“</strong>) zpracovává ve smyslu 
                         nařízení Evropského parlamentu a Rady (EU) č. 2016/679 o ochraně fyzických osob v souvislosti 
                         se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES 
                         (obecné nařízení o ochraně osobních údajů)(dále jen <strong>„Nařízení“</strong>), následující osobní údaje: 
