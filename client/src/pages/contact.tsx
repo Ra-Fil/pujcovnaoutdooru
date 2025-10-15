@@ -42,7 +42,7 @@ export default function Contact() {
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-gray-500" />
                   <div>
-                    <p>+420 734 415 950</p>
+                    <p>+420 606 476 399</p>
                   </div>
                 </div>
 
