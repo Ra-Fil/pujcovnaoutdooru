@@ -39,7 +39,7 @@ export default function Header({ cartItemCount, onCartClick }: HeaderProps) {
                 alt="Půjčovna outdooru.cz logo" 
                 className="h-8 w-auto mr-2"
               />
-              <span className="text-xl font-bold text-neutral-dark">Půjčovnaoutdooru.cz</span>
+              <span className="text-xl font-bold text-neutral-dark">Půjčovna outdooru.cz</span>
             </div>
           </Link>
 
