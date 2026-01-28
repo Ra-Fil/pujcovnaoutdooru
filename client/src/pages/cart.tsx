@@ -721,8 +721,12 @@ export default function Cart() {
       {editingDates.isOpen && editingDates.item && editingDates.equipment && (
         <CalendarModal
           isOpen={editingDates.isOpen}
-          onClose={() => setEditingDates({ isOpen: false, item: null, equipment: null })}
-          equipment={editingDates.equipment}
+          onClose={() => setEditingDates({ isOpen: false, item: null, 
+            equipment: null })}
+            equipmentId={editingDates.item.id}
+            equipmentName={editingDates.item.name}
+            equipment={editingDates.equipment}
+          
           onAddToCart={(dateFrom: string, dateTo: string, quantity: number) => {
             updateItemDates(editingDates.item!, dateFrom, dateTo, quantity);
           }}
