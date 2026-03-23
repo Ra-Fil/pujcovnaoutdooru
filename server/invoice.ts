@@ -698,7 +698,7 @@ export async function generateInvoicePDF(data: InvoiceData): Promise<Buffer> {
       const numberForQR = data.invoiceNumber || data.orderNumber || "000";
       const invoiceNumber =
         numberForQR.replace(/\D/g, "").slice(0, 10) || "000";
-      const qrCodeData = `SPD*1.0*ACC:CZ3955000000000857593001*AM:${totalAmount.toFixed(2)}*CC:CZK*X-VS:${invoiceNumber}*MSG:Pujcovnaoutdooru.cz  ${invoiceNumber}`;
+      const qrCodeData = `SPD*1.0*ACC:CZ2701000001077894380277*AM:${totalAmount.toFixed(2)}*CC:CZK*X-VS:${invoiceNumber}*MSG:Pujcovnaoutdooru.cz  ${invoiceNumber}`;
       qrCodeDataURL = await QRCode.toDataURL(qrCodeData, { width: 90 });
     } catch (error) {
       // QR code generation failed - continue without QR code
