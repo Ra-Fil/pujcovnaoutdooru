@@ -65,7 +65,7 @@ export async function sendContractEmails(
 
   const customerEmailParams: EmailParams = {
     to: customerEmail,
-    from: process.env.SMTP_USER || "pujcovnaoutdooru@gmail.com",
+    from: process.env.SMTP_USER || "info@pujcovnaoutdooru.cz",
     subject: `Potvrzení rezervace outdoorového vybavení - ${orderNumber}`,
     html: `
       <p>Ahoj!</p>
@@ -75,7 +75,7 @@ export async function sendContractEmails(
       <ul>
         <li>Kontaktujte mě prosím pro upřesnění místa a času předání.</li>
       </ul>
-      <p>Kontakt: +420 734 415 950 nebo pujcovnaoutdooru@gmail.com</p>
+      <p>Kontakt: +420 734 415 950 nebo info@pujcovnaoutdooru.cz</p>
       <p> </p>
       <p>Honza</p>
       <p>www.pujcovnaoutdooru.cz</p>
@@ -100,8 +100,8 @@ www.pujcovnaoutdooru.cz`,
   };
 
   const ownerEmailParams: EmailParams = {
-    to: "pujcovnaoutdooru@gmail.com",
-    from: process.env.SMTP_USER || "pujcovnaoutdooru@gmail.com",
+    to: "info@pujcovnaoutdooru.cz",
+    from: process.env.SMTP_USER || "info@pujcovnaoutdooru.cz",
     subject: `Nová rezervace - ${orderNumber}`,
     html: `
       <h2>Nová objednávka byla vytvořena</h2>
